@@ -1,0 +1,86 @@
+/* utilities */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* index page styles */
+
+.purpleBlock{
+    background: #7025FB;
+    padding: 30px 30px 30px 60px;
+    width: 768.64px;
+    height: 84px;
+}
+.crown{
+    width: 18px;
+    vertical-align: middle;
+}
+.crownText{
+    vertical-align: middle;
+}
+.orangeBlock{
+    background: #FD5334;
+    height: 1080px;
+    width: 100%;
+    left: 923px;
+    top: 0px;
+    border-radius: 0px;
+}
+.mainText{
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+    font-style: normal;
+    line-height: 109px;
+    text-transform: uppercase;
+    width: 600px;
+    position: absolute;
+    top: 250px;
+    left: 900px;
+}
+.littleBlack{
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    position: absolute;
+    top: 295px;
+    left: 1420px;
+}
+.indexPhoto{
+    height: 996px;
+    vertical-align:top;
+}
+.startButton{
+    position: absolute;
+    top: 550px;
+    left: 900px;
+    background-color: black;
+    border: none;
+    border-radius: 12px;
+    width: 180px;
+    height: 55px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    text-transform: capitalize;
+    
+}
+.startButton:hover{
+    transform: scale(0.98);
+}
+.arrow{
+    width: 25px;
+    vertical-align: middle;
+}
+
+
+
+
+
