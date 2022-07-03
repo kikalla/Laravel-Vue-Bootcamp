@@ -17,20 +17,26 @@
                 <img class="crownText" src="/images/Redberry Knight Cup.png" alt="text">
             </div>
             <img class="headerPhoto" src="/images/unsplash_27LH_0jXKYI.jpg" alt="chess">
-            <p class="headerTextBlack">“When you see a good move, look for a better one.”</p>
-            <p class="headerTextWhite">-Emanuel Lasker</p>
+            <p class="headerTextBlack nunito">“When you see a good move, look for a better one.”</p>
+            <p class="headerTextWhite nunito">-Emanuel Lasker</p>
         </div>
     </header>
     <section class="flex whiteBlock">
-        <p class="firstP">Start creating your account</p>
+        <p class="firstP openSans">Start Creating Your Account</p>
         <div class="grayLine"></div>
         <div class="flex twoBlocks">
-            <div class="firstBlock">1 <p class="firstBlockP">Personal information</p></div>
+            <div class="flex column">
+                <div class="firstBlock">1</div>
+                <p class="firstBlockP openSans">Personal information</p>
+            </div>
             <div class="blockLine"></div>
-            <div class="secondBlock">2 <p class="secondBlockP">Chess experience</p></div>
+            <div class="flex column">
+                <div class="secondBlock">2</div>
+                <p class="secondBlockP openSans">Chess experience</p>
+            </div>
         </div>
-        <h2 class="formH2">Personal information</h2>
-        <p class="secondP">This is basic informaton fields</p>
+        <h2 class="formH2 openSans">Personal information</h2>
+        <p class="secondP openSans">This Is Basic Informaton Fields</p>
         <form class="flex firstForm" action="submit">
 
 
@@ -43,8 +49,10 @@
             <input class="firstFormInput" placeholder="Date of birth" type="text" onfocus="(this.type='date')" >
 
         </form>
-        <button class="backBtn" onclick="location.href ='/index.html'">Back</button>
-        <button class="nextBtn" onclick="location.href ='secondForm.html'">next <img class="nextBtnArrow" src="/images/1Vector.svg" alt="arrow"></button>
+        <div class="buttons">
+            <button class="backBtn btn openSans" onclick="location.href ='/index.html'">Back</button>
+            <button class="nextBtn btn openSans" onclick="location.href ='secondForm.html'">next <img class="nextBtnArrow" src="/images/1Vector.svg" alt="arrow"></button>
+        </div>
     </section>
 <script src="/scripts/script.js"></script>
 </body>

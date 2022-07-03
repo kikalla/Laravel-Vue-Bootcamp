@@ -1,10 +1,23 @@
 /* utilities */
 .flex {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
-
+.openSans{
+    font-family: 'Open Sans';
+}
+.nunito{
+    font-family: 'Nunito';
+}
+.btn:hover{
+    transform: scale(0.98);
+}
+.btn{
+    cursor: pointer;
+    vertical-align: middle;
+    height: 53px;
+    font-weight: 400;
+    font-size: 20px;
+}
 /* index page styles */
 
 .purpleBlock{
@@ -22,33 +35,25 @@
 }
 .orangeBlock{
     background: #FD5334;
-    height: 1080px;
+    height: 100%;
     width: 997px;
-    left: 923px;
-    top: 0px;
     border-radius: 0px;
 }
 .mainText{
     color: white;
-    font-family: 'Nunito', sans-serif;
     font-weight: 800;
     font-size: 80px;
-    font-style: normal;
     line-height: 109px;
     text-transform: uppercase;
-    width: 600px;
-    position: absolute;
-    left: 1008px;
-    top: 265px;
+    padding-top: 265px;
+    margin-left: 85px;
 }    
 .littleBlack{
     color: black;
-    font-family: 'Nunito', sans-serif;
     text-transform: uppercase;
     font-size: 20px;
-    position: absolute;
-    left: 1530px;
-    top: 306px;    
+    line-height: 109px;
+    vertical-align: top;
 }
 .headerPhoto{
     height: 996px;
@@ -57,24 +62,11 @@
     vertical-align:top;
 }
 .startButton{
-    position: absolute;
-    left: 1008px;
-    top: 601px;
     background-color: black;
-    border: none;
     border-radius: 12px;
     width: 180px;
-    height: 55px;
     color: white;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 20px;
-    text-transform: capitalize;
-    
-}
-.startButton:hover{
-    transform: scale(0.98);
+    margin: 102px 0 0 85px ;
 }
 .arrow{
     width: 25px;
@@ -83,12 +75,11 @@
 /* form page styles */
 
 .headerTextBlack{
-    font-family: 'Nunito', sans-serif;
     position: absolute;
     width: 423px;
     height: 83px;
-    left: 102px;
-    top: 305px;
+    left: 130px;
+    top: 330px;
     font-style: italic;
     font-weight: 800;
     font-size: 26px;
@@ -100,9 +91,8 @@
     position: absolute;
     width: 222px;
     height: 33px;
-    left: 102px;
+    left: 130px;
     top: 412px;
-    font-family: 'Nunito';
     font-style: italic;
     font-weight: 500;
     font-size: 24px;
@@ -111,68 +101,33 @@
     color: #E5E6E8;
 }
 .whiteBlock{
-    height: 1080px;
-    width: 1151.36px;
-    left: 923px;
-    top: 0px;
-    border-radius: 0px;
     flex-direction: column;
 }
 .firstP{
-    position: absolute;
+    margin: 30px 0 0 48px;
     width: 215px;
-    height: 24px;
-    left: 971px;
-    top: 30px;
-    font-family: 'Open Sans';
-    font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    line-height: 150%;
-    text-transform: capitalize;
     color: #212529;
 }
-.formH2{
-    position: absolute;
-    width: 328px;
-    height: 48px;
-    left: 971px;
-    top: 324px;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 150%;
-    color: #000000;
-}
 .grayLine{
-    position: absolute;
+    margin-top: 35px;
     width: 997px;
-    height: 0px;
-    left: 923px;
-    top: 84px; 
     border: 1px solid rgba(185, 180, 196, 0.3);
 }
-.secondP{
-    position: absolute;
-    width: 205px;
-    height: 21px;
-    left: 971px;
-    top: 375px;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 150%;
-    text-transform: capitalize;
-    color: #95939A;
-}
 .twoBlocks{
-    position: absolute;
+    margin: 98px 0 0 48px;
     width: 366px;
     height: 65px;
-    left: 971px;
-    top: 144px;
+    align-items: center;
+}
+.column{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.column:last-child{
+    margin-left: 70px;
 }
 .firstBlock{
     width: 40px;
@@ -180,38 +135,23 @@
     background: #FFFFFF;
     border: 1px solid #E5E6E8;
     border-radius: 8px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
     text-align: center;
-    padding-top: 7px;
-    font-family: 'Open Sans';
-    font-style: normal;
+    padding-top: 9px;
     font-weight: 700;
     font-size: 18px;
-    line-height: 25px;
-    color: #212529;
 }
 .firstBlockP{
-    position: absolute;
     width: 158px;
-    height: 24px;
-    left: 0px;
-    top: 55px;
-    font-family: 'Open Sans';
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 150%;
-    color: #000000;
+    margin-top: 8px;
 }
 .blockLine{
     width: 174px;
-    height: 0px;
     border: 1px solid rgba(185, 180, 196, 0.3);
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+    position: absolute;
+    top: 205px;
+    left: 1070px;
 }
 .secondBlock{
     width: 40px;
@@ -219,104 +159,82 @@
     background: #F5F5F5;
     border: 1px solid #E5E6E8;
     border-radius: 8px;
-    flex: none;
-    order: 2;
-    flex-grow: 0;
     text-align: center;
-    padding-top: 7px;
-    font-family: 'Open Sans';
-    font-style: normal;
+    padding-top: 9px;
     font-weight: 700;
     font-size: 18px;
-    line-height: 25px;
     color: #95939A;
 }
 .secondBlockP{
-    position: absolute;
     width: 131px;
-    height: 24px;
-    left: 220px;
-    top: 55px;
-    font-family: 'Open Sans';
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 150%;
-    color: #000000;
+    margin-top: 8px;
+}
+.formH2{
+    margin: 79px 0 0 48px;
+    font-weight: 600;
+    font-size: 32px;
 }
 
-
+.secondP{
+    margin: 15px 0 0 48px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #95939A;
+}
 .firstForm{
+    margin: 85px 0 0 48px;
     flex-direction: column;
-    position: absolute;
-    width: 775px;
-    height: 304px;
-    left: 971px;
-    top: 481px;
 }
 ::placeholder{
     color: black;
+    font-size: 16px;
 }
 .firstFormInput{
     margin: 30px 0;
     border: 0;
     border-bottom:1px solid rgba(0, 0, 0, 0.125) ;
-    border-radius: 12px;
+    border-radius: 4px;
     width: 775px;
+    padding-left: 16px;
 }
 .firstFormInput:last-child{
-    padding: 7px 0;
+    padding: 7px 0 7px 16px;
 }
 .firstFormInput:focus{
     outline: none;
 }
+.buttons{
+    flex-direction: row;
+}
 .backBtn{
-    font-family: 'Open Sans';
-    font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 27px;
-    text-transform: capitalize;
     color: #212529;
     background-color: white;    
     border-radius: 12px;
-    flex-direction: column;
-    align-items: flex-start;
     padding: 13px 24px;
-    gap: 10px;
-    position: absolute;
     width: 93px;
-    height: 53px;
-    left: 971px;
-    top: 873px;
     border: 1px solid #212529;
     border-radius: 8px;
+    margin: 88px 0 0 48px;
 }
 .nextBtn{
-    vertical-align: middle;
-    padding: 13px 24px;
-    gap: 10px;
-    position: absolute;
+    margin: 88px 0 0 578px;
+    padding: 10px 24px 19px 24px;
     width: 128px;
-    height: 53px;
-    left: 1618px;
-    top: 873px;
     background: #212529;
     border-radius: 8px;
     color: white;
-    font-family: 'Open Sans';
-    font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 27px;
-    text-transform: capitalize;
-    color: #FFFFFF;
 }
 .nextBtnArrow{
     vertical-align: middle;
 }
-.backBtn:hover,
-.nextBtn:hover{
-    transform: scale(0.98);
-}
+
+
+
+
+
+
 
