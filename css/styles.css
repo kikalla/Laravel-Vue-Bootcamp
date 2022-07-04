@@ -18,6 +18,7 @@
     font-weight: 400;
     font-size: 20px;
 }
+
 /* index page styles */
 
 .purpleBlock{
@@ -183,31 +184,7 @@
     font-size: 14px;
     color: #95939A;
 }
-.firstForm{
-    margin: 85px 0 0 48px;
-    flex-direction: column;
-}
-::placeholder{
-    color: black;
-    font-size: 16px;
-}
-.firstFormInput{
-    margin: 30px 0;
-    border: 0;
-    border-bottom:1px solid rgba(0, 0, 0, 0.125) ;
-    border-radius: 4px;
-    width: 775px;
-    padding-left: 16px;
-}
-.firstFormInput:last-child{
-    padding: 7px 0 7px 16px;
-}
-.firstFormInput:focus{
-    outline: none;
-}
-.buttons{
-    flex-direction: row;
-}
+
 .backBtn{
     font-weight: 400;
     color: #212529;
@@ -219,8 +196,88 @@
     border-radius: 8px;
     margin: 88px 0 0 48px;
 }
+.alertBox{
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    position: absolute;
+    width: 350px;
+    height: 87px;
+    left: 1531px;
+    top: 226px;
+    padding: 10px 12px;
+    flex-direction: column;
+    display: none;
+}
+.alertP{
+    vertical-align: middle;
+    color: #DC3545;
+    font-weight: 600;
+    font-size: 14px;
+}
+.alertImg{
+    vertical-align: middle;
+    width: 20px;
+    margin-right: 10px;
+}
+#alertX{
+    margin-left: 190px;
+    cursor: pointer;
+}
+.alertLine{
+    width: 350px;
+    height: 0px;
+    border: 1px solid #B9B4C34D;
+    position: relative;
+    right: 13px;
+    top: 7px;
+}
+#alertText{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 18px;
+}
+
+/* Form styles */
+.firstForm{
+    margin: 85px 0 0 48px;
+    flex-direction: column;
+}
+::placeholder{
+    color: black;
+    font-size: 16px;
+}
+.firstFormInput{
+    margin: 30px 0;
+    border: 0;
+    border-bottom:2px solid rgba(0, 0, 0, 0.125) ;
+    border-radius: 4px;
+    width: 775px;
+    padding: 8px 16px;
+}
+.firstFormInput:last-child{
+    padding: 7px 0 7px 16px;
+}
+.firstFormInput:focus{
+    outline: none;
+}
+
+
+
+.check{
+    width: 22px;
+    position: relative;
+    right: 40px;
+    top: 2px;
+    display: none;
+    z-index: 100;
+}
+
 .nextBtn{
-    margin: 88px 0 0 578px;
+    position: absolute;
+    left: 1618px;
+    top: 933px;
     padding: 10px 24px 19px 24px;
     width: 128px;
     background: #212529;
@@ -235,6 +292,16 @@
 
 
 
-
-
-
+/* JS classes */
+.active{
+    display: inline-block;
+}
+.firstFormInput.error{
+    background: rgba(255, 136, 136, 0.5);
+}
+.firstFormInput.error::placeholder{
+    color: #DC3545;
+}
+.firstBlock.success{
+    background-color: #E9FAF1;
+}

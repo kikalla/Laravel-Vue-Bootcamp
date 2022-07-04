@@ -26,7 +26,7 @@
         <div class="grayLine"></div>
         <div class="flex twoBlocks">
             <div class="flex column">
-                <div class="firstBlock">1</div>
+                <div class="firstBlock" id="firstBlock">1</div>
                 <p class="firstBlockP openSans">Personal information</p>
             </div>
             <div class="blockLine"></div>
@@ -37,22 +37,37 @@
         </div>
         <h2 class="formH2 openSans">Personal information</h2>
         <p class="secondP openSans">This Is Basic Informaton Fields</p>
-        <form class="flex firstForm" action="submit">
-
-
-            <input class="firstFormInput" placeholder="Name" type="text">
-
-            <input class="firstFormInput"  placeholder="Email address" type="mail">
-
-            <input class="firstFormInput" placeholder="Phone number" type="text" >
-
-            <input class="firstFormInput" placeholder="Date of birth" type="text" onfocus="(this.type='date')" >
-
-        </form>
-        <div class="buttons">
-            <button class="backBtn btn openSans" onclick="location.href ='/index.html'">Back</button>
-            <button class="nextBtn btn openSans" onclick="location.href ='secondForm.html'">next <img class="nextBtnArrow" src="/images/1Vector.svg" alt="arrow"></button>
+        <div id="alertBox" class="alertBox flex">
+            <p class="alertP openSans"><img class="alertImg" src="/images/alert.png" alt="alert">Invalid email <img id="alertX" src="/images/X.png" alt="X"></p>
+            <div class="alertLine"></div>
+            <p id="alertText" class="openSans"></p>
         </div>
+        <form class="flex firstForm" id="form" action="submit">
+
+            <div>
+                <input id="name" class="firstFormInput" placeholder="Name" type="text" >
+                <img src="/images/Vector.jpg" alt="check" class="check">
+            </div>
+            
+            <div>
+                <input id="email" class="firstFormInput"  placeholder="Email address" type="text" >
+                <img src="/images/Vector.jpg" alt="check" class="check">
+            </div>
+
+            <div>
+                <input id="phone" class="firstFormInput" placeholder="Phone number" type="tel">
+                <img src="/images/Vector.jpg" alt="check" class="check">
+            </div>
+
+            <div>
+                <input id="date" class="firstFormInput" placeholder="Date of birth" type="text" onfocus="(this.type='date')" >
+                <img src="/images/Vector.jpg" alt="check" class="check">
+            </div>
+
+            <button id="nextBtn" class="nextBtn btn openSans" type="submit" onclick="location.href ='secondForm.html'">next <img class="nextBtnArrow" src="/images/1Vector.svg" alt="arrow"></button>
+        </form>
+        <button class="backBtn btn openSans" onclick="location.href ='/index.html'">Back</button>
+
     </section>
 <script src="/scripts/script.js"></script>
 </body>
