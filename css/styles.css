@@ -141,6 +141,11 @@
     font-weight: 700;
     font-size: 18px;
 }
+#doubleCheck{
+    position: absolute;
+    top: 195px;
+    display: none;
+}
 .firstBlockP{
     width: 158px;
     font-weight: 400;
@@ -151,7 +156,7 @@
     width: 174px;
     border: 1px solid rgba(185, 180, 196, 0.3);
     position: absolute;
-    top: 205px;
+    top: 202px;
     left: 1070px;
 }
 .secondBlock{
@@ -261,10 +266,14 @@
 }
 .firstFormInput:focus{
     outline: none;
+    
 }
-
-
-
+.firstFormInput:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
 .check{
     width: 22px;
     position: relative;
@@ -294,7 +303,7 @@
 
 /* JS classes */
 .active{
-    display: inline-block;
+    display: inline-block !important;
 }
 .firstFormInput.error{
     background: rgba(255, 136, 136, 0.5);
