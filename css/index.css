@@ -1,0 +1,75 @@
+
+/* utilities */
+.flex {
+    display: flex;
+}
+.openSans{
+    font-family: 'Open Sans';
+}
+.nunito{
+    font-family: 'Nunito';
+}
+.btn:hover{
+    transform: scale(0.98);
+}
+.btn{
+    cursor: pointer;
+    vertical-align: middle;
+    height: 53px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* index page styles */
+.purpleBlock{
+    background: #7025FB;
+    padding: 30px 30px 30px 60px;
+    width: 923px;
+    height: 84px;
+}
+.crown{
+    width: 18px;
+    vertical-align: middle;
+}
+.crownText{
+    vertical-align: middle;
+}
+.orangeBlock{
+    background: #FD5334;
+    height: 100%;
+    width: 997px;
+    border-radius: 0px;
+}
+.mainText{
+    color: white;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 109px;
+    text-transform: uppercase;
+    padding-top: 265px;
+    margin-left: 85px;
+}    
+.littleBlack{
+    color: black;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 109px;
+    vertical-align: top;
+}
+.headerPhoto{
+    height: 996px;
+    width: 923px;
+    object-fit: cover;
+    vertical-align:top;
+}
+.startButton{
+    background-color: black;
+    border-radius: 12px;
+    width: 180px;
+    color: white;
+    margin: 102px 0 0 85px ;
+}
+.arrow{
+    width: 25px;
+    vertical-align: middle;
+}

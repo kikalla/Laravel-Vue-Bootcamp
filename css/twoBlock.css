@@ -1,0 +1,89 @@
+/* two block */
+.whiteBlock{
+    flex-direction: column;
+}
+.firstP{
+    margin: 30px 0 0 48px;
+    width: 215px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #212529;
+}
+.grayLine{
+    margin-top: 35px;
+    width: 997px;
+    border: 1px solid rgba(185, 180, 196, 0.3);
+}
+.twoBlocks{
+    margin: 98px 0 0 48px;
+    width: 366px;
+    height: 65px;
+    align-items: center;
+}
+.column{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.column:last-child{
+    margin-left: 70px;
+}
+.firstBlock{
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #E5E6E8;
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 9px;
+    font-weight: 700;
+    font-size: 18px;
+}
+#doubleCheck{
+    position: absolute;
+    top: 195px;
+    display: none;
+}
+.firstBlockP{
+    width: 158px;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 8px;
+}
+.blockLine{
+    width: 174px;
+    border: 1px solid rgba(185, 180, 196, 0.3);
+    position: absolute;
+    top: 202px;
+    left: 1070px;
+}
+.secondBlock{
+    width: 40px;
+    height: 40px;
+    background: #F5F5F5;
+    border: 1px solid #E5E6E8;
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 9px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #95939A;
+}
+.secondBlockP{
+    width: 131px;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 8px;
+}
+.formH2{
+    margin: 79px 0 0 48px;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.secondP{
+    margin: 15px 0 0 48px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #95939A;
+}

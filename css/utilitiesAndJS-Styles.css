@@ -1,0 +1,68 @@
+/* utilities */
+.flex {
+    display: flex;
+}
+.openSans{
+    font-family: 'Open Sans';
+}
+.nunito{
+    font-family: 'Nunito';
+}
+.btn:hover{
+    transform: scale(0.98);
+}
+.btn{
+    cursor: pointer;
+    vertical-align: middle;
+    height: 53px;
+    font-weight: 400;
+    font-size: 20px;
+}
+.backBtn{
+    position: absolute;
+    left: 971px;
+    top: 953px;
+    font-weight: 400;
+    color: #212529;
+    background-color: white;    
+    border-radius: 12px;
+    padding: 13px 24px;
+    width: 93px;
+    border: 1px solid #212529;
+    border-radius: 8px;
+}
+.nextBtn{
+    position: absolute;
+    left: 1618px;
+    top: 953px;
+    padding: 10px 24px 19px 24px;
+    width: 128px;
+    background: #212529;
+    border-radius: 8px;
+    color: white;
+    font-weight: 400;
+}
+.nextBtnArrow{
+    vertical-align: middle;
+}
+/* JS classes */
+.active{
+    display: inline-block !important;
+}
+.firstFormInput.error{
+    background: rgba(255, 136, 136, 0.5);
+}
+.firstFormInput.error::placeholder{
+    color: #DC3545;
+}
+.firstBlock.success{
+    background-color: #E9FAF1;
+}
+.rotate{
+    transform: rotate(0deg);
+    transition: transform 0.4s ease;
+}
+.rotate2{
+    transform: rotate(180deg);
+    transition: transform 0.4s ease;
+}

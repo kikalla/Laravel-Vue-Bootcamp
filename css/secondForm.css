@@ -1,0 +1,91 @@
+
+/* second page styles */
+.secondHeaderTextBlack{
+    position: absolute;
+    width: 615px;
+    height: 83px;
+    left: 117px;
+    top: 261px; 
+    font-style: italic;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 35px;
+    text-transform: uppercase;
+}
+.headerTextWhite{
+    position: absolute;
+    width: 266px;
+    height: 33px;
+    left: 466px;
+    top: 376px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    text-transform: uppercase;
+    color: #093F68;
+}
+/* second Form styles */
+.secondForm{
+    margin: 85px 0 0 48px;
+    flex-direction: column;
+}
+.secondFormInput:focus{
+    outline: none;
+    
+}
+.radios{
+    margin-top: 88px;
+    position: absolute;
+    top: 537px;
+}
+label{
+    font-family: 'Open Sans';
+}
+.radioP{
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.options, .selectBtn{
+    font-weight: 400;
+    font-size: 20px;
+    width: 200px;    background: #FFFFFF;
+    border: 1px solid rgba(185, 180, 196, 0.3);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin: 10px 0;
+    cursor: pointer;
+    z-index: 100;
+    position: relative;
+}
+.selectBtn{
+    padding: 8px 20px;
+    width: 392px;
+    height: 46px;
+    border: none;
+    box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.125);
+    border-radius: 4px;
+    justify-content: space-between;
+}
+.option{
+    padding: 12px 20px;
+    margin: 10px 0;
+}
+.options{
+    width: 392px;
+    height: 179px;
+    display: none;
+}
+.arrowDown{
+    position: relative;
+    top: 12px;
+    height: 8px;
+    width: 14px;
+}
+.option:hover{
+    background-color:#F7F7F9;
+    ;
+    font-weight: 600;
+
+}

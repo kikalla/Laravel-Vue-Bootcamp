@@ -13,7 +13,7 @@ let closeBtn = document.getElementById('alertX');
 let nextBtn = document.getElementById('nextBtn');
 let doublecheck = document.getElementById('doubleCheck')
 
-//first form script
+// //first form script
 let isValidEmail = email => {
     let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
@@ -21,7 +21,11 @@ let isValidEmail = email => {
 form.addEventListener('submit', e => {
     e.preventDefault();
 });
-
+nextBtn.addEventListener('click',() =>{
+    if(!nextBtn.hasAttribute('onclick')){
+        alertBox.classList.add('active');
+    }
+})
 
 closeBtn.addEventListener('click',() =>{
     alertBox.classList.remove('active');
@@ -44,6 +48,7 @@ inputs[0].addEventListener('blur', e => {
     } else{
         box.innerText= '1'
         doublecheck.classList.remove('active');
+        nextBtn.removeAttribute('onclick', "location.href ='secondForm.html'");
     }
 });
 
@@ -65,6 +70,7 @@ inputs[1].addEventListener('blur', e => {
     } else{
         box.innerText= '1'
         doublecheck.classList.remove('active');
+        nextBtn.removeAttribute('onclick', "location.href ='secondForm.html'");
     }
 });
 inputs[2].addEventListener('blur', e => {
@@ -85,6 +91,7 @@ inputs[2].addEventListener('blur', e => {
     } else{
         box.innerText= '1'
         doublecheck.classList.remove('active');
+        nextBtn.removeAttribute('onclick', "location.href ='secondForm.html'");
     }
 });
 inputs[3].addEventListener('blur', e => {
@@ -103,6 +110,7 @@ inputs[3].addEventListener('blur', e => {
     } else{
         box.innerText= '1'
         doublecheck.classList.remove('active');
+        nextBtn.removeAttribute('onclick', "location.href ='secondForm.html'");
     }
 });
 
@@ -131,6 +139,3 @@ if(checks[0].classList.contains('active')){
 }
 
 console.log(checks[0].classList.contains('active'));
-
-
-// second form script

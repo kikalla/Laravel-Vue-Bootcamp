@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/firstForm.css">
+    <link rel="stylesheet" href="/css/utilitiesAndJS-Styles.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/twoBlock.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <title>Laravel / Vue Bootcamp</title>
 </head>
@@ -41,35 +44,29 @@
         <div id="alertBox" class="alertBox flex">
             <p class="alertP openSans"><img class="alertImg" src="/images/alert.png" alt="alert">Invalid email <img id="alertX" src="/images/X.png" alt="X"></p>
             <div class="alertLine"></div>
-            <p id="alertText" class="openSans"></p>
+            <p id="alertText" class="openSans">Fill Inputs</p>
         </div>
         <form class="flex firstForm" id="form" action="submit">
-
             <div>
-                <input id="name" class="firstFormInput" placeholder="Name" type="text" >
+                <input id="name" class="firstFormInput openSans" placeholder="Name" type="text" >
                 <img src="/images/Vector.jpg" alt="check" class="check">
             </div>
-            
             <div>
-                <input id="email" class="firstFormInput"  placeholder="Email address" type="text" >
+                <input id="email" class="firstFormInput openSans"  placeholder="Email address" type="text" >
                 <img src="/images/Vector.jpg" alt="check" class="check">
             </div>
-
             <div>
-                <input id="phone" class="firstFormInput" placeholder="Phone number" type="tel">
+                <input id="phone" class="firstFormInput openSans" placeholder="Phone number" type="tel">
                 <img src="/images/Vector.jpg" alt="check" class="check">
             </div>
-
             <div>
-                <input id="date" class="firstFormInput" placeholder="Date of birth" type="text" onfocus="(this.type='date')" >
+                <input id="date" class="firstFormInput openSans" placeholder="Date of birth" type="text" onfocus="(this.type='date')" >
                 <img src="/images/Vector.jpg" alt="check" class="check">
             </div>
-
             <button id="nextBtn" class="nextBtn btn openSans" type="submit" >next <img class="nextBtnArrow" src="/images/1Vector.svg" alt="arrow"></button>
         </form>
         <button class="backBtn btn openSans" onclick="location.href ='/index.html'">Back</button>
-
     </section>
-<script src="/scripts/script.js"></script>
+<script src="/scripts/firstForm.js"></script>
 </body>
 </html>
