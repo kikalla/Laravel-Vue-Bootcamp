@@ -21,12 +21,6 @@ let isValidEmail = email => {
 form.addEventListener('submit', e => {
     e.preventDefault();
 });
-nextBtn.addEventListener('click',() =>{
-    if(!nextBtn.hasAttribute('onclick')){
-        alertBox.classList.add('active');
-    }
-})
-
 closeBtn.addEventListener('click',() =>{
     alertBox.classList.remove('active');
 })
@@ -36,8 +30,10 @@ inputs[0].addEventListener('blur', e => {
     let nameValue = name.value.trim();
     if(nameValue === ''){
         setError(name,0,'Please enter name');
+    } else if(name.value.lenght <= 2){
+        setError(name,0,'Name must be at least 2 letters');
     } else{
-        setSuccess(name,0);
+        setSuccess(name,0); console.log(name.value.lenght);
     }
     box.classList.add('success');
     if(checks[0].classList.contains('active') && checks[1].classList.contains('active')&&
@@ -78,8 +74,12 @@ inputs[2].addEventListener('blur', e => {
     if(phoneValue === ''){
         setError(phone,2,'Please enter phone number');
     } else if(isNaN(phoneValue)){
-        setError(phone,2,'Please enter numbers only');
-    }   else{
+        setError(phone,2,'Please enter numbers only');    
+    }  else if(phoneValue.length != 9){
+        setError(phone,2,'Length Must Be 9 Numbers Long');
+        console.log(phoneValue.length);
+    }
+    else{
         setSuccess(phone,2);
     }
     box.classList.add('success')
@@ -128,14 +128,9 @@ function setSuccess(element,num){
     checks[num].classList.add('active');
     alertBox.classList.remove('active');
 }
-
-if(checks[0].classList.contains('active') && checks[1].classList.contains('active')&&
-checks[2].classList.contains('active') && checks[3].classList.contains('active')){
-    console.log('dasd');
-}
-
-if(checks[0].classList.contains('active')){
-    console.log('ads');
-}
-
-console.log(checks[0].classList.contains('active'));
+nextBtn.addEventListener('click',() =>{
+    if(!nextBtn.hasAttribute('onclick')){
+        alertBox.classList.add('active');
+        alertText.innerHTML = 'Fill Inputs Correctly'
+    }
+})
