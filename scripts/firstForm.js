@@ -1,4 +1,3 @@
-
 // variables
 let form = document.getElementById('form');
 let name = document.getElementById('name');
@@ -11,7 +10,13 @@ let inputs = document.querySelectorAll('.firstFormInput');
 let alertBox = document.getElementById('alertBox');
 let closeBtn = document.getElementById('alertX');
 let nextBtn = document.getElementById('nextBtn');
-let doublecheck = document.getElementById('doubleCheck')
+let doublecheck = document.getElementById('doubleCheck');
+
+
+inputs[0].value = localStorage.getItem('name');
+inputs[1].value = localStorage.getItem('email');
+inputs[2].value = localStorage.getItem('phone');
+inputs[3].value = localStorage.getItem('date');
 
 // //first form script
 let isValidEmail = email => {
@@ -20,7 +25,35 @@ let isValidEmail = email => {
 }
 form.addEventListener('submit', e => {
     e.preventDefault();
-});
+    let isValid = true
+
+    let formData = {
+        name: e.target[0].value,
+        email: e.target[1].value,
+        phone: e.target[2].value,
+        date: e.target[3].value
+    }
+    console.log(formData);
+    if(!checks[0].classList.contains('active')){
+        isValid = false
+    }
+    if(!checks[1].classList.contains('active')){
+        isValid = false
+    }
+    if(!checks[2].classList.contains('active')){
+        isValid = false
+    }
+    if(!checks[3].classList.contains('active')){
+        isValid = false
+    }
+    if(isValid){
+        location.href ='secondForm.html';
+    }
+}
+    
+
+
+);
 closeBtn.addEventListener('click',() =>{
     alertBox.classList.remove('active');
 })
@@ -30,22 +63,17 @@ inputs[0].addEventListener('blur', e => {
     let nameValue = name.value.trim();
     if(nameValue === ''){
         setError(name,0,'Please enter name');
-    } else if(name.value.lenght <= 2){
+    } else if(name.value.length < 2){
         setError(name,0,'Name must be at least 2 letters');
     } else{
-        setSuccess(name,0); console.log(name.value.lenght);
+        setSuccess(name,0);
     }
     box.classList.add('success');
-    if(checks[0].classList.contains('active') && checks[1].classList.contains('active')&&
-    checks[2].classList.contains('active') && checks[3].classList.contains('active')){
-        nextBtn.setAttribute('onclick', "location.href ='secondForm.html'");
-        box.innerText= ''
+    if((checks[2], checks[1], checks[2], checks[3]).classList.contains('active')){
         doublecheck.classList.add('active');
-    } else{
-        box.innerText= '1'
-        doublecheck.classList.remove('active');
-        nextBtn.removeAttribute('onclick', "location.href ='secondForm.html'");
+        box.innerText= ''
     }
+    localStorage.setItem('name', inputs[0].value);    
 });
 
 inputs[1].addEventListener('blur', e => {
@@ -54,20 +82,17 @@ inputs[1].addEventListener('blur', e => {
         setError(email,1,'Please enter email address');
     } else if (!isValidEmail(emailValue)) {
         setError(email,1, 'Please enter valid email address');
+    } else if(!emailValue.includes('@redberry.ge')){
+        setError(email,1, 'Email must include @redberry.ge');
     } else{
         setSuccess(email,1);
     }
     box.classList.add('success');
-    if(checks[0].classList.contains('active') && checks[1].classList.contains('active')&&
-    checks[2].classList.contains('active') && checks[3].classList.contains('active')){
-        nextBtn.setAttribute('onclick', "location.href ='secondForm.html'");
-        box.innerText= ''
+    if((checks[2], checks[1], checks[2], checks[3]).classList.contains('active')){
         doublecheck.classList.add('active');
-    } else{
-        box.innerText= '1'
-        doublecheck.classList.remove('active');
-        nextBtn.removeAttribute('onclick', "location.href ='secondForm.html'");
+        box.innerText= ''
     }
+    localStorage.setItem('email', inputs[1].value);
 });
 inputs[2].addEventListener('blur', e => {
     let phoneValue = phone.value.trim();
@@ -77,22 +102,15 @@ inputs[2].addEventListener('blur', e => {
         setError(phone,2,'Please enter numbers only');    
     }  else if(phoneValue.length != 9){
         setError(phone,2,'Length Must Be 9 Numbers Long');
-        console.log(phoneValue.length);
-    }
-    else{
+    } else{
         setSuccess(phone,2);
     }
     box.classList.add('success')
-    if(checks[0].classList.contains('active') && checks[1].classList.contains('active')&&
-    checks[2].classList.contains('active') && checks[3].classList.contains('active')){
-        nextBtn.setAttribute('onclick', "location.href ='secondForm.html'");
-        box.innerText= ''
+    if((checks[2], checks[1], checks[2], checks[3]).classList.contains('active')){
         doublecheck.classList.add('active');
-    } else{
-        box.innerText= '1'
-        doublecheck.classList.remove('active');
-        nextBtn.removeAttribute('onclick', "location.href ='secondForm.html'");
+        box.innerText= ''
     }
+    localStorage.setItem('phone', inputs[2].value);
 });
 inputs[3].addEventListener('blur', e => {
     let dateValue = date.value.trim();
@@ -102,16 +120,11 @@ inputs[3].addEventListener('blur', e => {
         setSuccess(date,3);
     }
     box.classList.add('success');
-    if(checks[0].classList.contains('active') && checks[1].classList.contains('active')&&
-    checks[2].classList.contains('active') && checks[3].classList.contains('active')){
-        nextBtn.setAttribute('onclick', "location.href ='secondForm.html'");
-        box.innerText= ''
+    if((checks[2], checks[1], checks[2], checks[3]).classList.contains('active')){
         doublecheck.classList.add('active');
-    } else{
-        box.innerText= '1'
-        doublecheck.classList.remove('active');
-        nextBtn.removeAttribute('onclick', "location.href ='secondForm.html'");
+        box.innerText= ''
     }
+    localStorage.setItem('date', inputs[3].value);
 });
 
 function setError(element,num,message){

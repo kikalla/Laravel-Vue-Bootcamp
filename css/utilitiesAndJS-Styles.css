@@ -55,9 +55,11 @@
 .firstFormInput.error::placeholder{
     color: #DC3545;
 }
-.firstBlock.success{
+.firstBlock.success,
+.secondBlock.success{
     background-color: #E9FAF1;
 }
+
 .rotate{
     transform: rotate(0deg);
     transition: transform 0.4s ease;
