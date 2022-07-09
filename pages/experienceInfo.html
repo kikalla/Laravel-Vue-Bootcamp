@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/twoBlock.css">
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/secondForm.css">
+    <link rel="stylesheet" href="/css/experienceForm.css">
     <link rel="stylesheet" href="/css/utilitiesAndJS-Styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <title>Laravel / Vue Bootcamp</title>
@@ -16,17 +16,17 @@
     <header>
         <div>
             <div class="purpleBlock">
-                <img class="crown" src="/images/Vector.png" alt="crown">
+                <img class="crown" src="/images/crown.png" alt="crown">
                 <img class="crownText" src="/images/Redberry Knight Cup.png" alt="text">
             </div>
-            <img class="headerPhoto" src="/images/3.jpg" alt="chess">
+            <img class="headerPhoto" src="/images/experienceFormPhoto.jpg" alt="chess">
             <p class="secondHeaderTextBlack nunito">“Many have become chess masters; 
               <br>  no one has become the master of chess.”</p>
             <p class="headerTextWhite nunito">- Siegbert Tarrasch</p>
         </div>
     </header>
-    <section class="flex whiteBlock">
-        <p class="firstP openSans">Start Creating Your Account</p>
+    <section class="flex rightContent">
+        <p class="startingP openSans">Start Creating Your Account</p>
         <div class="grayLine"></div>
         <div class="flex twoBlocks">
             <div class="flex column">
@@ -41,13 +41,13 @@
             </div>
         </div>
         <h2 class="formH2 openSans">Chess experience</h2>
-        <p class="secondP openSans">This Is Basic Informaton Fields</p>
+        <p class="formP openSans">This Is Basic Informaton Fields</p>
 
         <form class="flex secondForm" id="secondForm" action="submit">
             <div class="flex">
                 <div class="selectMenu openSans" id="level">
                     <div class="selectBtn flex openSans">
-                        <span class="selectBtnT">level of knowledge</span>
+                        <span class="selectBtnText">level of knowledge</span>
                         <img class="arrowDown rotate" src="/images/arrow down.png" alt="arrow">
                     </div>
                     <ul class="options openSans">
@@ -59,7 +59,7 @@
 
                 <div class="secondSelectMenu openSans" id="level">
                     <div class="secondSelectBtn flex openSans">
-                        <span class="secondSelectBtnT">Choose your character</span>
+                        <span class="secondSelectBtnText">Choose your character</span>
                         <img class="secondArrowDown rotate" src="/images/arrow down.png" alt="arrow">
                     </div>
                     <ul class="secondOptions openSans">
@@ -75,11 +75,11 @@
                 <input class="radio" type="radio" name="yes/no" id="no">
                 <label for="no">No</label>
             </div>
-            <button id="secondNextBtn" class="nextBtn btn openSans" type="submit" >next <img class="nextBtnArrow" src="/images/1Vector.svg" alt="arrow"></button>
+            <button id="secondNextBtn" class="nextBtn btn openSans" type="submit" >Next <img class="nextBtnArrow" src="/images/1Vector.svg" alt="arrow"></button>
         </form>
-        <button class="backBtn btn openSans" onclick="location.href ='firstForm.html'">Back</button>
+        <button class="backBtn btn openSans" onclick="location.href ='personalInfo.html'">Back</button>
 
     </section>
-<script src="/scripts/secondForm.js"></script>
+<script src="/scripts/experienceForm.js"></script>
 </body>
 </html>

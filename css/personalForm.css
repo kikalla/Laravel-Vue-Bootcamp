@@ -1,6 +1,5 @@
 
-/* Firstform page styles */
-
+/* personalInfo page styles */
 .headerTextBlack{
     position: absolute;
     width: 423px;
@@ -103,7 +102,7 @@
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active  {
-    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    box-shadow: 0 0 0 30px white inset !important;
 }
 .check{
     width: 22px;

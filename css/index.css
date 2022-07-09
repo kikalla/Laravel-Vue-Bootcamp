@@ -1,25 +1,3 @@
-
-/* utilities */
-.flex {
-    display: flex;
-}
-.openSans{
-    font-family: 'Open Sans';
-}
-.nunito{
-    font-family: 'Nunito';
-}
-.btn:hover{
-    transform: scale(0.98);
-}
-.btn{
-    cursor: pointer;
-    vertical-align: middle;
-    height: 53px;
-    font-weight: 400;
-    font-size: 20px;
-}
-
 /* index page styles */
 .purpleBlock{
     background: #7025FB;

@@ -1,8 +1,8 @@
 /* two block */
-.whiteBlock{
+.rightContent{
     flex-direction: column;
 }
-.firstP{
+.startingP{
     margin: 30px 0 0 48px;
     width: 215px;
     font-weight: 600;
@@ -81,7 +81,7 @@
     font-size: 32px;
 }
 
-.secondP{
+.formP{
     margin: 15px 0 0 48px;
     font-weight: 600;
     font-size: 14px;

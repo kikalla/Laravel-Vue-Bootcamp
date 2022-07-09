@@ -1,7 +1,4 @@
-
-/* second page styles */
-
-
+/* experienceInfo page styles */
 .secondBlock{
     background-color: white;
     color: black;
@@ -96,7 +93,6 @@ label{
     font-weight: 600;
 
 }
-
 .secondOptions, .secondSelectBtn{
     font-weight: 400;
     font-size: 20px;
