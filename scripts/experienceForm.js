@@ -71,7 +71,7 @@ form.addEventListener('submit', e => {
             date_of_birth: localStorage.getItem('date'),
             experience_level: localStorage.getItem('experience_level'),
             already_participated: radioBtns[0].checked,
-            character_id: localStorage.getItem('character_id')
+            character_id: Number(localStorage.getItem('character_id'))
         };
         console.log(formData);
         fetch(`${REDBERRY_URL}/api/register`, {
@@ -83,7 +83,7 @@ form.addEventListener('submit', e => {
             body: JSON.stringify(formData)
           }).then(response => {
                 console.log(response);
-                localStorage.clear();
+                // localStorage.clear();
                 // location.href ='onboardingCompleted.html';
           })
           .catch((error) => {
@@ -122,24 +122,20 @@ Http.open("GET", url);
 Http.send();
 Http.onreadystatechange = (e) => {
     if (Http.readyState == 4 && Http.status == 200) {
-        let reques = JSON.parse(Http.responseText)
-        for(let i =0 ; i < reques.length; i++){
+        let request = JSON.parse(Http.responseText)
+        for(let i =0 ; i < request.length; i++){
             let li = document.createElement('li');
             let img = document.createElement('img');
             li.classList.add('secondOption','flex');
-            li.innerHTML = reques[i].name;
-            li.setAttribute('id',reques[i].id);
+            li.innerHTML = request[i].name;
+            li.setAttribute('id',request[i].id);
             img.classList.add('masterPhoto');
             img.setAttribute('alt','character');
-            img.setAttribute('src','https://chess-tournament-api.devtest.ge'+ reques[i].image);
+            img.setAttribute('src','https://chess-tournament-api.devtest.ge'+ request[i].image);
             total.innerText = '(Total'+(i + 1)+')';
             secondOptions.appendChild(li);
             li.appendChild(img);
         }
-        let other = document.createElement('li')
-        other.classList.add('secondOption','flex');
-        other.innerHTML = 'Other <img class="masterPhoto" alt="def" src="https://www.roomlets.rentals/templates/default_theme/img/person.jpg"     >'
-        secondOptions.appendChild(other);
         secondOptions.childNodes.forEach((child) =>{
             child.addEventListener('click', () =>{
                 let text = child.innerText;
