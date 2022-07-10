@@ -73,7 +73,6 @@ form.addEventListener('submit', e => {
             already_participated: radioBtns[0].checked,
             character_id: Number(localStorage.getItem('character_id'))
         };
-        console.log(formData);
         fetch(`${REDBERRY_URL}/api/register`, {
             method: 'POST',
             headers: {
@@ -82,9 +81,8 @@ form.addEventListener('submit', e => {
             },
             body: JSON.stringify(formData)
           }).then(response => {
-                console.log(response);
-                // localStorage.clear();
-                // location.href ='onboardingCompleted.html';
+                localStorage.clear();
+                location.href ='onboardingCompleted.html';
           })
           .catch((error) => {
             console.log('Error:', error)
