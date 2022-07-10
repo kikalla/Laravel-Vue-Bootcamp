@@ -45,6 +45,9 @@
 .nextBtnArrow{
     vertical-align: middle;
 }
+.red{
+    color: red;
+}
 /* JS classes */
 .active{
     display: inline-block !important;

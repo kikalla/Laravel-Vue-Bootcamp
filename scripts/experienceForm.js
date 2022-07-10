@@ -25,18 +25,18 @@ let nextBtn = document.querySelector('#secondNextBtn');
 if(localStorage.getItem('experience_level') != null){
     selectBtnText.innerText = localStorage.getItem('experience_level');
 } else {
-    selectBtnText.innerText == 'level of knowledge';
+    selectBtnText.innerHTML == 'level of knowledge<span class="red">*</span>';
 }
 if(localStorage.getItem('character_idText') != null){
     secondselectBtnText.innerText = localStorage.getItem('character_idText');
 } else{
-    secondselectBtnText.innerText == 'Choose your character';
+    secondselectBtnText.innerHTML == 'Choose your character<span class="red">*</span>';
 }
 
 if(localStorage.getItem('already_participated0') === 'true'){
     radioBtns[0].checked = true;
     radioBtns[1].checked = false;
-} else{
+} else {
     radioBtns[0].checked = false;
     radioBtns[1].checked = true;
 }
@@ -57,7 +57,7 @@ radioBtns[1].addEventListener('click', () => {
 form.addEventListener('submit', e => {
     e.preventDefault();
     let isValid = true;
-    if(selectBtnText.innerText == 'level of knowledge' || secondselectBtnText.innerText == 'Choose your character'){
+    if(selectBtnText.innerHTML == 'level of knowledge<span class="red">*</span>' || secondselectBtnText.innerHTML == 'Choose your character<span class="red">*</span>'){
         isValid = false;
     } 
     if(!radioBtns[0].checked && !radioBtns[1].checked){
@@ -68,23 +68,26 @@ form.addEventListener('submit', e => {
             name: localStorage.getItem('name'),
             email: localStorage.getItem('email'),
             phone: localStorage.getItem('phone'),
-            date: localStorage.getItem('date'),
+            date_of_birth: localStorage.getItem('date'),
             experience_level: localStorage.getItem('experience_level'),
-            character_id: localStorage.getItem('character_id'),
-            already_participated: radioBtns[0].checked
+            already_participated: radioBtns[0].checked,
+            character_id: localStorage.getItem('character_id')
         };
         console.log(formData);
         fetch(`${REDBERRY_URL}/api/register`, {
             method: 'POST',
             headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'accept': 'application/json',
+                'content-Type': 'application/json'
             },
             body: JSON.stringify(formData)
           }).then(response => {
                 console.log(response);
                 localStorage.clear();
-                location.href ='onboardingCompleted.html';
+                // location.href ='onboardingCompleted.html';
+          })
+          .catch((error) => {
+            console.log('Error:', error)
           })
     }
 });
@@ -151,8 +154,3 @@ Http.onreadystatechange = (e) => {
         })
     }
 }
-
-
-
-
-
